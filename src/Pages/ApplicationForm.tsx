@@ -133,6 +133,26 @@ export default function ApplicationForm() {
 						</button>
 					</>
 				)}
+
+				{currentStep == 3 && (
+					<div className="flex flex-col">
+						<form.AppField name="position">
+							{(field) => (
+								<field.TextField label="Position" placeholder="Job Position" />
+							)}
+						</form.AppField>
+
+						<form.AppField name="terms">
+							{(field) => (
+								<field.CheckedField label="Accept Terms & Conditions" />
+							)}
+						</form.AppField>
+
+						<form.AppForm>
+							<form.SubmitButton label="submit" />
+						</form.AppForm>
+					</div>
+				)}
 			</form>
 		</div>
 	);
