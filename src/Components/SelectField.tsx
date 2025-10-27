@@ -1,9 +1,20 @@
 import React from "react";
 
-export default function SelectField() {
+export default function SelectField({
+	label,
+	listChoice,
+}: {
+	label: string;
+	listChoice: string[];
+}) {
 	return (
-		<div>
-			<h1>SelectField</h1>
-		</div>
+		<label>
+			<h2>{label}</h2>
+			<select>
+				{listChoice.map((choice) => (
+					<option value={choice}>{choice}</option>
+				))}
+			</select>
+		</label>
 	);
 }

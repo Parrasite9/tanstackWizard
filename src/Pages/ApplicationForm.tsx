@@ -96,6 +96,43 @@ export default function ApplicationForm() {
 						</button>
 					</>
 				)}
+
+				{currentStep == 2 && (
+					<>
+						<div className="flex flex-col">
+							<form.AppField name="gender">
+								{(field) => (
+									<field.SelectField
+										label="Select Gender"
+										listChoice={genderOptions}
+									/>
+								)}
+							</form.AppField>
+
+							<div className="flex">
+								<form.AppField name="address.city">
+									{(field) => (
+										<field.TextField label="city" placeholder="city" />
+									)}
+								</form.AppField>
+
+								<form.AppField name="address.state">
+									{(field) => (
+										<field.TextField label="state" placeholder="state" />
+									)}
+								</form.AppField>
+
+								<form.AppField name="address.zipcode">
+									{(field) => <field.NumberField label="ZipCode" />}
+								</form.AppField>
+							</div>
+						</div>
+
+						<button onClick={nextStep} className="bg-blue-300 w-1/5">
+							Next
+						</button>
+					</>
+				)}
 			</form>
 		</div>
 	);
