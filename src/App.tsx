@@ -1,9 +1,10 @@
 import React from "react";
+import ApplicationForm from "./Pages/ApplicationForm";
 
 function App() {
 	return (
-		<div>
-			<h1>My Application Wizard</h1>
+		<div className="flex justify-center h-screen">
+			<ApplicationForm />
 		</div>
 	);
 }
